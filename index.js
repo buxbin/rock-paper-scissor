@@ -19,7 +19,7 @@ button.forEach((button) => {
   });
 });
 
-resetButton.addEventListener("click", (e) => {
+resetButton.addEventListener("click", () => {
   playerUnknown.textContent = "?";
   computerUnknown.textContent = "?";
   showWinner.textContent = "Waiting for choices";
