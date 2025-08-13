@@ -3,6 +3,8 @@
 const button = document.querySelectorAll(".choices > button");
 const playerUnknown = document.querySelector(".player-unknown");
 const computerUnknown = document.querySelector(".computer-unknown");
+const showWinner = document.querySelector(".winner");
+const resetButton = document.querySelector(".reset");
 
 button.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -12,7 +14,15 @@ button.forEach((button) => {
 
     playerUnknown.textContent = getChoiceEmoji(userChoice);
     computerUnknown.textContent = getChoiceEmoji(computerChoice);
+
+    showWinner.textContent = winner;
   });
+});
+
+resetButton.addEventListener("click", (e) => {
+  playerUnknown.textContent = "?";
+  computerUnknown.textContent = "?";
+  showWinner.textContent = "Waiting for choices";
 });
 
 function getComputerChoice() {
