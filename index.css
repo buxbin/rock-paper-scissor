@@ -51,18 +51,6 @@
   text-align: center;
 }
 
-.player-choice {
-  /* flex: 2; */
-}
-
-.computer-choice {
-  /* flex: 2; */
-}
-
-.choice-versus {
-  /* flex: 1; */
-}
-
 .choice-unknown {
   font-size: 100px;
 }

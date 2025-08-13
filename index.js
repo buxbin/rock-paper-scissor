@@ -1,5 +1,37 @@
 "use strict";
 
+const button = document.querySelectorAll(".choices > button");
+
+button.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const userChoice = e.target.dataset.choice;
+    const computerChoice = getComputerChoice();
+    const winner = determineWinner(userChoice, computerChoice);
+    console.log(userChoice);
+    console.log(computerChoice);
+
+    console.log(winner);
+  });
+});
+
+function getComputerChoice() {
+  return ["rock", "paper", "scissor"][Math.floor(Math.random() * 3)];
+}
+
+function determineWinner(user, computer) {
+  if (user === computer) return "Unentschieden";
+
+  const winConditions = {
+    rock: "scissor",
+    paper: "rock",
+    scissor: "paper",
+  };
+
+  return winConditions[user] === computer
+    ? "Du hast gewonnen!"
+    : "Der Computer hat gewonnen!";
+}
+
 // let computerScore = 0,
 //   humanScore = 0;
 
