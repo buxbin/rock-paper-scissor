@@ -1,2 +1,72 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 .choices {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+}
+
+.choices button {
+  flex: 1;
+  height: 100%;
+  font-size: 100px;
+}
+
+.welcome {
+  height: 100px;
+}
+
+.welcome-header {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.welcome-para {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.welcome-choices {
+  display: flex;
+}
+
+.welcome-choices p {
+  flex: 1;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.result {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.result div {
+  text-align: center;
+}
+
+.player-choice {
+  /* flex: 2; */
+}
+
+.computer-choice {
+  /* flex: 2; */
+}
+
+.choice-versus {
+  /* flex: 1; */
+}
+
+.choice-unknown {
+  font-size: 100px;
+}
+
+.versus-header {
+  margin: 70px 50px 0px;
 }
