@@ -1,16 +1,17 @@
 "use strict";
 
 const button = document.querySelectorAll(".choices > button");
+const playerUnknown = document.querySelector(".player-unknown");
+const computerUnknown = document.querySelector(".computer-unknown");
 
 button.forEach((button) => {
   button.addEventListener("click", (e) => {
     const userChoice = e.target.dataset.choice;
     const computerChoice = getComputerChoice();
     const winner = determineWinner(userChoice, computerChoice);
-    console.log(userChoice);
-    console.log(computerChoice);
 
-    console.log(winner);
+    playerUnknown.textContent = getChoiceEmoji(userChoice);
+    computerUnknown.textContent = getChoiceEmoji(computerChoice);
   });
 });
 
@@ -30,6 +31,16 @@ function determineWinner(user, computer) {
   return winConditions[user] === computer
     ? "Du hast gewonnen!"
     : "Der Computer hat gewonnen!";
+}
+
+function getChoiceEmoji(choice) {
+  const emojis = {
+    rock: "👊",
+    paper: "✋",
+    scissor: "✌️",
+  };
+
+  return emojis[choice];
 }
 
 // let computerScore = 0,
